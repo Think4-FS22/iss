@@ -88,3 +88,16 @@ function updateIssData(response) {
 
   redraw();
 }
+
+
+function keyTyped(){
+  // zoom in and out
+  if(key == 'q'){
+    projection.scale(projection.scale() * 1.5);
+
+  }else if(key == 'w'){
+    projection.scale(projection.scale() * 0.5);
+  }
+
+  redraw();
+}
